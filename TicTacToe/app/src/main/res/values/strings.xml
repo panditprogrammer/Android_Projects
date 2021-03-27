@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="player">player</string>
+    <string name="oplayer">oplayer</string>
+    <string name="xplayer">xplayer</string>
+    <string name="grid">maingrid</string>
+    <string name="Heading">Tic Tac Toe - PanditProgrammer.com</string>
+    <string name="bottomStatus">Player </string>
+    <string name="turn">O\'s Turn</string>
+    <string name="TapToPlay">Rotate To Restart !</string>
+    <string name="Reset">Restart</string>
+</resources>
