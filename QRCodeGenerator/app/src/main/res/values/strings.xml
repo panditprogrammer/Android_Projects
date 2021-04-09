@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">QR Code Generator</string>
+    <string name="hint">Enter here</string>
+    <string name="btn">btn</string>
+    <string name="image">image</string>
+    <string name="title">PanditProgrammer.com</string>
+    <string name="gen">Generate</string>
+</resources>
