@@ -22,4 +22,9 @@ https://drive.google.com/file/d/1QRcD3Ud54LZvTpueCA7WX4keMngdWRri/view?usp=shari
 # Application preview
 ![Screenshot_20210409_161838](https://user-images.githubusercontent.com/65272533/114169701-85220f00-994f-11eb-9306-d65eeaf63897.jpg)
 
+# QR and BAR code Scanner
+
+click here to download android QR and bar code scanner
+https://drive.google.com/file/d/1dKjYLWtXbKESZMMiA97RfmbCvF9Uw54p/view?usp=sharing
+
 
