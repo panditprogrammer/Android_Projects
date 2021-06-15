@@ -25,6 +25,5 @@ https://drive.google.com/file/d/1QRcD3Ud54LZvTpueCA7WX4keMngdWRri/view?usp=shari
 # QR and BAR code Scanner
 
 click here to download android QR and bar code scanner
-https://drive.google.com/file/d/1dKjYLWtXbKESZMMiA97RfmbCvF9Uw54p/view?usp=sharing
 
-
+https://drive.google.com/file/d/1KgNDawgMM5kBSST-sgrDycJLYPOZInIL/view?usp=drivesdk
