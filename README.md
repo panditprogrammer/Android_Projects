@@ -15,10 +15,12 @@ https://drive.google.com/file/d/1jIZTfxQMOyIZ_sSlghwT21r0YJnxtlUr/view?usp=shari
 ![torch](https://user-images.githubusercontent.com/65272533/114109914-efa56180-98f3-11eb-84a4-c8c30605a609.png)
 
 # QR CODE generator Android application : Pandit Programmer
-![qr-code](https://user-images.githubusercontent.com/65272533/114169360-13e25c00-994f-11eb-812d-bdc25571ed9e.png)
+![Screenshot_20210701_233254](https://user-images.githubusercontent.com/65272533/124170396-fd1e5200-dac4-11eb-8a1e-be1399b9d5d7.jpg)
 
-# Link For Download App
-https://drive.google.com/file/d/1QRcD3Ud54LZvTpueCA7WX4keMngdWRri/view?usp=sharing
+# Link For Download QR CODE GENERATOR APP
+https://drive.google.com/file/d/1y0JR5spCuAN0wMgGVUbO9_Py059FYV3y/view?usp=sharing
+
+
 # Application preview
 ![Screenshot_20210409_161838](https://user-images.githubusercontent.com/65272533/114169701-85220f00-994f-11eb-9306-d65eeaf63897.jpg)
 
