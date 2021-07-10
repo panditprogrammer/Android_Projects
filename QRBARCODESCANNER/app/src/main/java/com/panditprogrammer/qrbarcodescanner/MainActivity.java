@@ -4,12 +4,17 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Dialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -17,8 +22,13 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     //initialize global variables
-    Button btn;
+    Button scan,copy,open;
+    TextView result;
+    String url;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +36,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //assigning varable
-        btn = findViewById(R.id.button);
+        scan = findViewById(R.id.scan);
+        copy = findViewById(R.id.copy);
+        open = findViewById(R.id.open);
+        result = findViewById(R.id.result);
+
 
         //onclick listener
-        btn.setOnClickListener(new View.OnClickListener() {
+        scan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -52,7 +66,47 @@ public class MainActivity extends AppCompatActivity {
                 intentIntegrator.initiateScan();
             }
         });
+
+
+        //copy result to the clipboard
+        copy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                ClipboardManager clipboard = (ClipboardManager) getSystemService((Context.CLIPBOARD_SERVICE));
+
+                ClipData clip = ClipData.newPlainText("Result",result.getText().toString());
+
+                clipboard.setPrimaryClip(clip);
+
+                Toast.makeText(MainActivity.this, "Result Copied", Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+        //open in browser
+        open.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(result.getText().toString() != "")
+                {
+                    url = ("https://google.com/search?q="+result.getText().toString());
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(url));
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+
+
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -64,26 +118,8 @@ public class MainActivity extends AppCompatActivity {
         //checking condition
         if(intentResult.getContents() != null)
         {
-            //alert if condition true
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-
-            //set title
-            builder.setTitle("Result");
-
-            //set message
-            builder.setMessage(intentResult.getContents());
-
-            //set positive button
-            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    //dismiss dialog
-                   dialog.dismiss();
-                }
-            });
-            //show alert dialog
-            builder.show();
-
+            //set result to the result text view
+            result.setText((intentResult.getContents()).toString());
         }
         else
         {
@@ -91,5 +127,10 @@ public class MainActivity extends AppCompatActivity {
             //display toast
             Toast.makeText(this, "Scanning failed!", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    @Override
+    public void setRequestedOrientation(int requestedOrientation) {
+        super.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 }

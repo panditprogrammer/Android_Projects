@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">QR &amp; BAR CODE SCANNER</string>
+    <string name="result">Result</string>
+    <string name="copy">Copy</string>
+    <string name="open">Open in browser</string>
     <string name="scan">Scan</string>
     <string name="title">PanditProgrammer.com</string>
 
